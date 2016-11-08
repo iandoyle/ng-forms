@@ -9,22 +9,6 @@ Date: November 8, 2016
 
 # Markdown
 
-@(Angular 2)[tempate forms|model forms]
+@(Angular 2)[forms]
 
 **Sandbox** practice writing 10 templates today
-
-- A demo of these forms can be seen here [Demo][1]
-
-----------
-
-[TOC]
-##Second Main Section
-###Second Sub Section
-##Third Main Section
-###Third Sub Section
-> This is a nice background note.
-##Fourth Main Section
-``` css
-body 
-
-[1]: http://google.com
