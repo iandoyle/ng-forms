@@ -9,18 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var AdminComponent = (function () {
+    function AdminComponent() {
     }
-    AppComponent = __decorate([
+    AdminComponent.prototype.ngOnInit = function () { };
+    AdminComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            styles: ["\n    \n  "],
-            template: "\n    <div class=\"jumbotron text-center\">\n      <h1>The App Lives!</h1>\n      <router-outlet></router-outlet>\n    </div>\n  "
+            template: "\n        ADMIN TEMPLATE\n    "
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], AdminComponent);
+    return AdminComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.AdminComponent = AdminComponent;
+//# sourceMappingURL=admin.component.js.map
