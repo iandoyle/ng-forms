@@ -11,14 +11,46 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var forms_1 = require('@angular/forms');
 var core_1 = require('@angular/core');
 var ReactiveFormComponent = (function () {
-    function ReactiveFormComponent() {
+    function ReactiveFormComponent(fb) {
+        this.fb = fb;
     }
     ReactiveFormComponent.prototype.ngOnInit = function () {
-        this.form = new forms_1.FormGroup({
-            name: new forms_1.FormControl(''),
-            username: new forms_1.FormControl('')
+        this.buildForm();
+    };
+    ReactiveFormComponent.prototype.buildForm = function () {
+        // this.form = new FormGroup({
+        //     name: new FormControl(''),
+        //     username: new FormControl('')
+        // });
+        var _this = this;
+        //build the form
+        this.form = this.fb.group({
+            name: ['', [forms_1.Validators.minLength(3), forms_1.Validators.maxLength(6)]],
+            username: ['', forms_1.Validators.minLength(3)]
         });
-        console.log(this.form);
+        // watch for changes and validate
+        this.form.valueChanges.subscribe(function (data) { return _this.validateForm(); });
+    };
+    ReactiveFormComponent.prototype.validateForm = function () {
+        this.nameError = '';
+        this.usernameError = '';
+        // validate each field
+        var name = this.form.get('name');
+        var username = this.form.get('username');
+        if (name.invalid && name.dirty) {
+            if (name.errors['required'])
+                this.nameError = 'name is required';
+            if (name.errors['minlength'])
+                this.nameError = 'name must be at least 3 characters';
+            if (name.errors['maxlength'])
+                this.nameError = 'name must be less than 6 characters';
+        }
+        if (username.invalid && username.dirty) {
+            if (username.errors['required'])
+                this.usernameError = 'username is required';
+            if (username.errors['minlength'])
+                this.usernameError = 'username must be at least 3 characters';
+        }
     };
     ReactiveFormComponent.prototype.processForm = function () {
         console.log('processing', this.form.value);
@@ -28,7 +60,7 @@ var ReactiveFormComponent = (function () {
             selector: 'reactive-form',
             templateUrl: './app/reactive/reactive-form.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [forms_1.FormBuilder])
     ], ReactiveFormComponent);
     return ReactiveFormComponent;
 }());
