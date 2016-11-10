@@ -8,19 +8,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var forms_1 = require('@angular/forms');
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var ReactiveFormComponent = (function () {
+    function ReactiveFormComponent() {
     }
-    AppComponent = __decorate([
+    ReactiveFormComponent.prototype.ngOnInit = function () {
+        this.form = new forms_1.FormGroup({
+            name: new forms_1.FormControl(''),
+            username: new forms_1.FormControl('')
+        });
+        console.log(this.form);
+    };
+    ReactiveFormComponent.prototype.processForm = function () {
+        console.log('processing', this.form.value);
+    };
+    ReactiveFormComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            styles: ["\n    \n  "],
-            template: "\n    <router-outlet></router-outlet>\n    <h2>Template Form</h2>\n    <template-form></template-form>\n    <reactive-form></reactive-form>\n  "
+            selector: 'reactive-form',
+            templateUrl: './app/reactive/reactive-form.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], ReactiveFormComponent);
+    return ReactiveFormComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.ReactiveFormComponent = ReactiveFormComponent;
+//# sourceMappingURL=reactive-form.component.js.map

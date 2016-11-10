@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var reactive_form_component_1 = require('./reactive/reactive-form.component');
 var template_form_component_1 = require('./template/template-form.component');
 var welcome_component_1 = require('./welcome.component');
 var app_routing_1 = require('./app.routing');
@@ -21,8 +22,8 @@ var AppModule = (function () {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, app_routing_1.appRouting, admin_module_1.AdminModule],
-            declarations: [app_component_1.AppComponent, welcome_component_1.WelcomeComponent, template_form_component_1.TemplateFormComponent],
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, forms_1.ReactiveFormsModule, app_routing_1.appRouting, admin_module_1.AdminModule],
+            declarations: [app_component_1.AppComponent, welcome_component_1.WelcomeComponent, template_form_component_1.TemplateFormComponent, reactive_form_component_1.ReactiveFormComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
