@@ -8,10 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var template_form_component_1 = require('./template/template-form.component');
 var welcome_component_1 = require('./welcome.component');
 var app_routing_1 = require('./app.routing');
 var admin_module_1 = require('./admin/admin.module');
 var core_1 = require('@angular/core');
+var forms_1 = require('@angular/forms');
 var platform_browser_1 = require('@angular/platform-browser');
 var app_component_1 = require('./app.component');
 var AppModule = (function () {
@@ -19,8 +21,8 @@ var AppModule = (function () {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, app_routing_1.appRouting, admin_module_1.AdminModule],
-            declarations: [app_component_1.AppComponent, welcome_component_1.WelcomeComponent],
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, app_routing_1.appRouting, admin_module_1.AdminModule],
+            declarations: [app_component_1.AppComponent, welcome_component_1.WelcomeComponent, template_form_component_1.TemplateFormComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

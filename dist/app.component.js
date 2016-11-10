@@ -16,7 +16,7 @@ var AppComponent = (function () {
         core_1.Component({
             selector: 'my-app',
             styles: ["\n    \n  "],
-            template: "\n    <div class=\"jumbotron text-center\">\n      <h1>The App Lives!</h1>\n\n\t\t\t\t<li><a routerLink=\"admin\">Admin</a></li>\n        <main>\n        <router-outlet></router-outlet>\n        </main>\n    </div>\n  "
+            template: "\n    <router-outlet></router-outlet>\n    <h2>Template Form</h2>\n    <template-form></template-form>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
