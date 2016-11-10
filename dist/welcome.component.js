@@ -15,7 +15,7 @@ var WelcomeComponent = (function () {
     WelcomeComponent.prototype.ngOnInit = function () { };
     WelcomeComponent = __decorate([
         core_1.Component({
-            template: "welcome"
+            template: ""
         }), 
         __metadata('design:paramtypes', [])
     ], WelcomeComponent);
