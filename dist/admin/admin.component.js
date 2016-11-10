@@ -15,7 +15,7 @@ var AdminComponent = (function () {
     AdminComponent.prototype.ngOnInit = function () { };
     AdminComponent = __decorate([
         core_1.Component({
-            template: "\n        ADMIN TEMPLATE\n    "
+            template: "\n        ADMIN TEMPLATE\n        <router-outlet></router-outlet>\n    "
         }), 
         __metadata('design:paramtypes', [])
     ], AdminComponent);

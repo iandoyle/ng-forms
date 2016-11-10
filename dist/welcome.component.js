@@ -9,18 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var WelcomeComponent = (function () {
+    function WelcomeComponent() {
     }
-    AppComponent = __decorate([
+    WelcomeComponent.prototype.ngOnInit = function () { };
+    WelcomeComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            styles: ["\n    \n  "],
-            template: "\n    <div class=\"jumbotron text-center\">\n      <h1>The App Lives!</h1>\n\n\t\t\t\t<li><a routerLink=\"admin\">Admin</a></li>\n        <main>\n        <router-outlet></router-outlet>\n        </main>\n    </div>\n  "
+            template: "welcome"
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], WelcomeComponent);
+    return WelcomeComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.WelcomeComponent = WelcomeComponent;
+//# sourceMappingURL=welcome.component.js.map

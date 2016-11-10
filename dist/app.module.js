@@ -8,7 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var _admin_routing_1 = require('./admin/.admin.routing');
+var welcome_component_1 = require('./welcome.component');
+var app_routing_1 = require('./app.routing');
+var admin_module_1 = require('./admin/admin.module');
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var app_component_1 = require('./app.component');
@@ -17,8 +19,8 @@ var AppModule = (function () {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, _admin_routing_1.adminRouting],
-            declarations: [app_component_1.AppComponent],
+            imports: [platform_browser_1.BrowserModule, app_routing_1.appRouting, admin_module_1.AdminModule],
+            declarations: [app_component_1.AppComponent, welcome_component_1.WelcomeComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

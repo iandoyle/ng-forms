@@ -8,14 +8,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var admin_routing_1 = require('./admin.routing');
 var core_1 = require('@angular/core');
+var common_1 = require('@angular/common');
 var admin_component_1 = require('./admin.component');
 var AdminModule = (function () {
     function AdminModule() {
     }
     AdminModule = __decorate([
         core_1.NgModule({
-            imports: [],
+            imports: [common_1.CommonModule, admin_routing_1.adminRouting],
             exports: [],
             declarations: [admin_component_1.AdminComponent],
             providers: [],
